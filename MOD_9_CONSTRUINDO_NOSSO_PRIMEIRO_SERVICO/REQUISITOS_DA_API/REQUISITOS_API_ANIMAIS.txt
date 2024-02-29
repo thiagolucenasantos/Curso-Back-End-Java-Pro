@@ -1,0 +1,45 @@
+REQUISITOS FUNCIONAIS
+
+API que permita o cadastro de animais que foram registrados por um abrigo.
+
+Endpoints: 
+- Cadastro de animais.
+- Listagem de animais no abrigo que ainda não foram adotados, ordenados pela data de entrada do abrigo.
+- Listagem de animais no abrigo que já foram adotados.
+
+
+
+REQUISITOS NÃO FUNCIONAIS
+
+Linguagem: Java
+Rodar o serviço dentro de um container
+Base de dados a ser utilizada: H2
+Autenticação e autorização não necessárias agora.
+Larga escala: não
+ApiIs precisam retornar o resultado no formato JSON
+Protocolo de comunicação vai ser o  HTTP
+As APIs precisam ser no formato RESTful
+
+Domínio:
+
+Animais
+
+
+
+
+
+--------------------------------------------------------
+
+
+O QUE É REST
+
+normalmente o domímio de uma api rest
+
+Ex: localhost: 8080/animais/
+
+MÉTODOS MAIS UTILIZADOS
+
+GET -> USADO PARA LEITURA E BUSCA DE RECURSOS, ELE NÃO ADMITE MUDANÇA DE ESTADOS,NÃO DEVERIA
+POST -> CRIAR O RECURSO NA SUA BASE DE DADOS
+PUT -> ATUALIZAR ALGUM RECURSO NA BASE
+DELETE -> DELETA O RECURSO EMESPECÍFICO
