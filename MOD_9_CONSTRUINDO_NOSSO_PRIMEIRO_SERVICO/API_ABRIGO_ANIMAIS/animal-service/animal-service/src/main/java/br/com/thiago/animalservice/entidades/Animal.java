@@ -4,9 +4,14 @@ import jakarta.persistence.*;
 
 import java.sql.Date;
 
+
 @Entity
 
 public class Animal {
+
+    public enum TipoAnimal{
+        Cachorro, Gato
+    }
 
     @Id  // criação de Id e automaticamente a chave primária
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -36,6 +41,9 @@ public class Animal {
     private Date dataObito;
     @Column(nullable = false)
     private String porte;
+    @Column(nullable = false)
+    @Enumerated(EnumType.STRING)
+    private TipoAnimal tipoAnimal;
 
     public String getNomeProvisorio() {
         return nomeProvisorio;
@@ -107,5 +115,13 @@ public class Animal {
 
     public void setPorte(String porte) {
         this.porte = porte;
+    }
+
+    public TipoAnimal getTipoAnimal() {
+        return tipoAnimal;
+    }
+
+    public void setTipoAnimal(TipoAnimal tipoAnimal) {
+        this.tipoAnimal = tipoAnimal;
     }
 }

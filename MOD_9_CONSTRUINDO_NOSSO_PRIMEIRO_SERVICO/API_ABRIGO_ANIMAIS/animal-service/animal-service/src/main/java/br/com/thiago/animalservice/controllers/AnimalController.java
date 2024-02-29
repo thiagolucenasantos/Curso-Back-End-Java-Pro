@@ -39,4 +39,14 @@ public class AnimalController {
         return repository.findAdopted();
     }
 
+    @GetMapping("/find-cachorro")
+    private List<Animal> findTypeCachorros(){
+        return repository.findTypeCachorros();
+    }
+
+    @GetMapping("/find-gato")
+    private List<Animal> findTypeGatos(){
+        return repository.findTypeGatos();
+    }
+
 }
