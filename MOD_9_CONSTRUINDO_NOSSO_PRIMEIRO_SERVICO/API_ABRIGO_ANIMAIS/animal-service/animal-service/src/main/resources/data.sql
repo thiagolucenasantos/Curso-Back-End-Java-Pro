@@ -18,3 +18,17 @@ VALUES
         (nome_provisorio, idade_estimada, raca, data_entrada, condicoes_chegada, nome_recebedor, porte, tipo_animal, data_adocao)
       VALUES
         ('Toto',2, 'Pugy', current_date, 'Novinho', 'Catarina', 'pequeno','Gato', current_date);
+
+      INSERT
+      INTO
+        funcionario
+        (nome)
+      VALUES
+        ('Thiago');
+
+      INSERT
+      INTO
+         funcionario
+         (nome)
+      VALUES
+         ('Catarina');

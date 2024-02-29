@@ -4,12 +4,11 @@ import jakarta.persistence.*;
 
 import java.sql.Date;
 
-
 @Entity
 
 public class Animal {
 
-    public enum TipoAnimal{
+    public enum TipoAnimal {
         Cachorro, Gato
     }
 
@@ -44,6 +43,10 @@ public class Animal {
     @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private TipoAnimal tipoAnimal;
+    @ManyToOne
+    @JoinColumn(name = "funcionario_id") // nome da coluna na tabela Animal
+    private Funcionario funcionario;
+
 
     public String getNomeProvisorio() {
         return nomeProvisorio;
