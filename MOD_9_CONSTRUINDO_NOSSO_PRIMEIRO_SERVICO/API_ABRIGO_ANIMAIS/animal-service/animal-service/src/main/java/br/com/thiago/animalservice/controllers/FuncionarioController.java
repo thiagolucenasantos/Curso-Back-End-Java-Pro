@@ -23,11 +23,11 @@ public class FuncionarioController {
 
     // Endpoint para recuperar a quantidade de animais resgatados por cada funcionário dentro de um ano
     @GetMapping("/animais-resgatados")
-    public ResponseEntity<List<Object[]>> countAnimaisResgatadosPorFuncionarioNoAno(
+    public ResponseEntity<List<Object[]>> countAnimaisResgatadosPorFuncionarioNoIntervalo(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate startDate,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate endDate
     ) {
-        List<Object[]> animaisResgatados = funcionarioRepository.countAnimaisResgatadosPorFuncionarioNoAno(
+        List<Object[]> animaisResgatados = funcionarioRepository.countAnimaisResgatadosPorFuncionarioNoIntervalo(
                 Date.valueOf(startDate.atStartOfDay().toLocalDate()), Date.valueOf(endDate.atStartOfDay().toLocalDate())
         );
         return ResponseEntity.ok(animaisResgatados);

@@ -12,7 +12,7 @@ public interface FuncionarioRepository extends JpaRepository<Funcionario, Long> 
     // Método para contar a quantidade de animais resgatados por cada funcionário
     @Query("SELECT f.nome, COUNT(a) FROM Funcionario f JOIN f.animaisResgatados a " +
             "WHERE a.dataEntrada BETWEEN :startDate AND :endDate GROUP BY f.nome")
-    List<Object[]> countAnimaisResgatadosPorFuncionarioNoAno(
+    List<Object[]> countAnimaisResgatadosPorFuncionarioNoIntervalo(
             @Param("startDate") Date startDate, @Param("endDate") Date endDate
     );
 }
