@@ -1,0 +1,4 @@
+br\com\thiago\eventosKafka\configuracao\ConfigTopico.class
+br\com\thiago\eventosKafka\consumidor\ConfigConsumidor.class
+br\com\thiago\eventosKafka\EventosKafkaApplication.class
+br\com\thiago\eventosKafka\produtor\produtorController.class
