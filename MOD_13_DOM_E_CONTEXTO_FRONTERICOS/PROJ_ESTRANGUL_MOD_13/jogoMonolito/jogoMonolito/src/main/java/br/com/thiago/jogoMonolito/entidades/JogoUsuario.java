@@ -15,14 +15,17 @@ public class JogoUsuario {
     private Long id;
     @Getter
     @Setter
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "usuario_id", referencedColumnName = "id")
     private Usuario usuario;
     @Getter
     @Setter
-    @ManyToOne
+    @OneToOne
     @JoinColumn(name = "jogo_id", referencedColumnName = "id")
     private Jogo jogo;
+    @Getter
+    @Setter
+    private String idNovoUsuario;
 
     public JogoUsuario() {
     }

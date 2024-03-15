@@ -6,3 +6,9 @@ INSERT INTO usuario (nome, login, idade) VALUES ('Thiago', 'thi', '37');
 
 INSERT INTO jogo_usuario (usuario_id, jogo_id) VALUES  (1, 2);
 
+INSERT
+INTO
+  usuario
+  (nome, login, idade, altura_cm)
+VALUES
+  ('Carlos', 'car', 23, 186);

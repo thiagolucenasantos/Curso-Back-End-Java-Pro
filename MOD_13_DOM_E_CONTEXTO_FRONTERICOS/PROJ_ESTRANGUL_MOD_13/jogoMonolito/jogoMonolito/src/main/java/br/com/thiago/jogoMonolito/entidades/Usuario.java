@@ -26,6 +26,9 @@ public class Usuario {
     @Getter
     @Setter
     private Integer idade;
+    @Getter
+    @Setter
+    private Integer alturaCm;
 
 }
 

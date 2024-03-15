@@ -19,5 +19,8 @@ public class UsuarioVo implements Serializable {
     @Getter
     @Setter
     private String idNovoUsuario;
+    @Getter
+    @Setter
+    private Integer alturaCm;
 
 }
