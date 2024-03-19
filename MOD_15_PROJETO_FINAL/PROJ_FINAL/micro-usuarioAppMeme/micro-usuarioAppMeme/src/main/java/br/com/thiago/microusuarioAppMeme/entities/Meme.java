@@ -25,6 +25,17 @@ public class Meme {
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
+    public Meme(){}
+
+    public Meme(Long id, String nome, String descricao, Date dataCadastro, CategoriaMeme categoriaMeme, Usuario usuario) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dataCadastro = dataCadastro;
+        this.categoriaMeme = categoriaMeme;
+        this.usuario = usuario;
+    }
+
     public Long getId() {
         return id;
     }

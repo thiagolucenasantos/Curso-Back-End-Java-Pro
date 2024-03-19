@@ -11,16 +11,34 @@ public class CategoriaMeme {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    public Long id;
+    private Long id;
     @Column(name = "nome", nullable = false)
-    public String nome;
+    private String nome;
     @Column(name = "descricao", nullable = false)
-    public String descricao;
+    private String descricao;
 
     @Column(name = "data_cadastro", nullable = false)
-    public Date dataCadastro;
+    private Date dataCadastro;
     @OneToMany(mappedBy = "categoriaMeme")
     private List<Meme> memes;
+
+    public CategoriaMeme(){}
+
+    public CategoriaMeme(Long id, String nome, String descricao, Date dataCadastro, List<Meme> memes) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dataCadastro = dataCadastro;
+        this.memes = memes;
+    }
+    public List<Meme> getMemes() {
+        return memes;
+    }
+
+
+    public void setMemes(List<Meme> memes) {
+        this.memes = memes;
+    }
 
     public Long getId() {
         return id;

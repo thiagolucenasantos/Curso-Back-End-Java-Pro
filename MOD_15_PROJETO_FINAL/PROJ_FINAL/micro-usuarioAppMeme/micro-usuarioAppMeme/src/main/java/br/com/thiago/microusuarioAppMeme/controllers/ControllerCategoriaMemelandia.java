@@ -9,18 +9,23 @@ import java.util.List;
 
 @Controller
 @RestController
-@RequestMapping(path = "/memelandia")
+@RequestMapping(path = "/categorias")
 
 public class ControllerCategoriaMemelandia {
     private ServiceCategoriaMeme serviceCategoriaMeme;
     private ControllerMeme controllerMeme;
 
-    @GetMapping("/categoria_meme")
+    public ControllerCategoriaMemelandia(ServiceCategoriaMeme serviceCategoriaMeme, ControllerMeme controllerMeme) {
+        this.serviceCategoriaMeme = serviceCategoriaMeme;
+        this.controllerMeme = controllerMeme;
+    }
+
+    @GetMapping("categoria_meme")
     public List<CategoriaMeme> buscaCategoria() {
         return serviceCategoriaMeme.listarTodosUsuarios();
     }
 
-    @PostMapping("/nova-categoria")
+    @PostMapping(path = "nova-categoria")
     public CategoriaMeme novaCategoria(@RequestBody CategoriaMeme categoriaMeme) {
         return serviceCategoriaMeme.novaCategoriaMeme(categoriaMeme);
     }

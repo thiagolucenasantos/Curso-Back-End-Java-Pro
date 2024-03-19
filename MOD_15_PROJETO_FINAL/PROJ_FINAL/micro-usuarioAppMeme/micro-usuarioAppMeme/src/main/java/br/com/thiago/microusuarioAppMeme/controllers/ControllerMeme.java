@@ -11,7 +11,7 @@ import java.util.List;
 
 @Controller
 @RestController
-@RequestMapping(path = "/memelandia/memes")
+@RequestMapping(path = "/memes")
 public class ControllerMeme {
     @Autowired
     private ServiceMeme serviceMeme;
@@ -25,4 +25,8 @@ public class ControllerMeme {
         return serviceMeme.salvarMemes(meme);
     }
 
+    @GetMapping("aleatorios")
+    private List<Meme> buscarMemesAleatorios(){
+        return serviceMeme.buscarMemesAleatorios();
+    }
 }
